@@ -1,5 +1,65 @@
-/* CSS declarations go here */
+body {
+  font-size: 18px;
+}
 
-* {
-  color:red;
+.text-white {
+  color: white;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-blue {
+  background-color: #002e58;
+}
+
+a {
+  color: inherit;
+}
+
+.bg-darkblue {
+  background-color: #001f3b;
+}
+
+.info-padding {
+  padding: 50px 20px 0px 20px;
+}
+
+.skill-padding {
+  padding: 0px 20px 50px 20px;
+}
+
+.skills-heading {
+  padding: 5px 20px 5px 20px;
+  background-color: #001f3b;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.projects-heading {
+  padding: 5px 0px 5px 0px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #002e58;
+
+  border-bottom: 2px solid;
+  border-top: 2px solid;
+  border-color: rgb(230, 230, 230);
+}
+
+.nopadding {
+  padding: 0 !important;
+}
+
+h1 {
+  margin: 0 !important;
+}
+
+.progress-margin {
+  margin: 6px 0px 0px 0px;
+}
+
+.progress { 
+  height: 15px !important;
 }

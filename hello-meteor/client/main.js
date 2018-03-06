@@ -1,22 +1,18 @@
-import { Template } from 'meteor/templating';
-import { ReactiveVar } from 'meteor/reactive-var';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Meteor } from "meteor/meteor";
 
-import './main.html';
+import App from "./../imports/ui/App";
 
-Template.hello.onCreated(function helloOnCreated() {
-  // counter starts at 0
-  this.counter = new ReactiveVar(0);
-});
+let cvdata = {
+  title: "Jerzy Lasyk",
+  description: "I am software developer with over 4 years of professional experience, passionate about blockchain development.",
+  addressUrl: "https://www.linkedin.com/in/jerzylasyk",
+  personalInfo: {name: "E-mail", info: "jerzylasyk@gmail.com"},
+  projects: [{name: "SDARS", description: "Satellite radio application for automotive companies like Volvo, Volkswagen."}],
+  skills: [{name: "English", level: 4}, {name: "C++", level: 5}]
+};
 
-Template.hello.helpers({
-  counter() {
-    return Template.instance().counter.get();
-  },
-});
-
-Template.hello.events({
-  'click button'(event, instance) {
-    // increment the counter when button is clicked
-    instance.counter.set(instance.counter.get() + 1);
-  },
+Meteor.startup(() => {
+  ReactDOM.render(<App cvdata={cvdata} />, document.getElementById("app"));
 });
